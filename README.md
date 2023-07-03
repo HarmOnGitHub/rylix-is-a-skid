@@ -14,3 +14,6 @@ Do not buy or use any of Rylix's "hacks", as they all contain the same malicious
 He claims he does this for "security" reasons, but anyone with an IQ over 4 knows it's complete bullshit.   
 The code provided here is not clean. If you're planning on using anything here, clean it up first.   
 When Todd GD is unshadowbanned from GitHub (soon hopefully) he'll make a repo with clean versions.
+
+# THE VIDEO
+https://www.youtube.com/watch?v=aIoMizTaydk
