@@ -2,8 +2,8 @@
 This repository contains a decompiled version of every one of Rylixmods' free "hacks". Mainly to expose him for hiding very malicious code inside of his programs.   
 
 # Credits   
-Todd GD (original decompiler and provider of the source code files)   
-CNSL (thank you for helping decomp!)   
+Todd GD (thank you for helping decomp!)   
+CNSL (original decompiler and provider of the source code files)   
 Harm (me, uploading the repo while Todd GD is shadowbanned)
 
 # To Rylix   
