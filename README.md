@@ -5,7 +5,7 @@ This repository contains a decompiled version of every one of Rylixmods' free "h
 - Todd GD (thank you for helping decomp!)   
 - CNSL (original decompiler and provider of the source code files)   
 - Harm (me, uploading the repo while Todd GD is shadowbanned)
-- Calloc (Reverse engineered parts that haven't been completely decompiled yet by CNSL and is planning to do more)
+- Calloc (Forked and Reverse engineered parts that haven't been completely decompiled yet by CNSL and is planning to do more)
 
 # To Rylix   
 You never worked with Anaban. Anaban has said numerous times he doesn't know you. Quit lying, you've been caught.   
