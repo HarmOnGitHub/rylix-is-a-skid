@@ -6,7 +6,7 @@ This repository contains a decompiled version of every one of Rylixmods' free "h
 - CNSL (original decompiler and provider of the source code files)   
 - Harm (uploading the repo while Todd GD is shadowbanned)
 - Calloc (me, Forked Harm's repository and Reverse engineered the parts that the python decompilers couldn't quite get or do correctly, It took me quite a bit of time as well)
-- Username23 (Provided extra background information, Thank you for helping us!)
+- RadzikanistraMod (Provided extra background information, Thank you for helping us!)
 
 # To Rylix
 You never worked with Anaban. Anaban has said numerous times he doesn't know you. Quit lying, you've been caught.   
@@ -22,7 +22,7 @@ If you're planning on using anything here, clean it up first there's some __Very
 All have the same trojan, so it should be easy to clean.
 
 # What Else Did People Like Us Do About It?
-- Luckily ToddGD managed to spam and delete his Discord Webhook (Good Work ToddGD) and Username23 did alot of digging around for info. This was done after I exposed the missing parts and extracted the webhook from the code so that he cannot go out ripping off more people.
+- Luckily ToddGD managed to spam and delete his Discord Webhook (Good Work ToddGD) and RadzikanistraMod did alot of digging around for info. This was done after I exposed the missing parts and extracted the webhook from the code so that he cannot go out ripping off more people.
  
 - I (Calloc), am currently adding the final touches to the code and then checking to make sure that the entire decompilation does in fact match which I already have no doubt that it does.
 
