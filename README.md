@@ -34,5 +34,6 @@ https://www.youtube.com/watch?v=aIoMizTaydk
 # UPDATES
  ![alt text](https://media.discordapp.net/attachments/1132386115622543421/1139318968096665711/image.png?width=1025&height=155)
 - As of 8/10/2023 Me and RadzikanistraMod have been banned from his server and it seems to us that he enjoys censoring us, this is typical for anyone that wishes to weasel out of an argument.
-
-
+- During that time It had encouraged me to finish up the decomp and now we just need to match the bytecodes up afterwards...
+- I Have no doubt that I'm now 100% Done with the decomplation and I'll be trying to get people to come and see this fork
+If needed I'll change the name of this repository. or ask if harm can forward people to my full crack of his code...
