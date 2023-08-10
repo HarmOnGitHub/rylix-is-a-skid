@@ -30,3 +30,9 @@ All have the same trojan, so it should be easy to clean.
 
 # THE VIDEO
 https://www.youtube.com/watch?v=aIoMizTaydk
+
+# UPDATES
+ ![alt text](https://media.discordapp.net/attachments/1132386115622543421/1139318968096665711/image.png?width=1025&height=155)
+- As of 8/10/2023 Me and RadzikanistraMod have been banned from his server and it seems to us that he enjoys censoring us, this is typical for a anyone that wishes to weasel out of an argument.
+
+
